@@ -274,11 +274,23 @@
             grid-column: span 12;
         }
 
-        .highlights-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 16px;
-        }
+       .highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+@media (max-width: 1024px) {
+    .highlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .highlights-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
         .highlight-card {
             background: transparent;
@@ -1251,7 +1263,7 @@
                     </div>
                 </div>
 
-                <!-- Card 6: Email Automation (was 4) -->
+              <!-- Card 6: Email Automation (was 4) -->
                 <div class="skill-card" onclick="toggleCard(this)">
                     <div class="skill-card-content">
                         <h3 class="skill-card-title">Email Automation & Lifecycle Marketing</h3>
@@ -1288,6 +1300,16 @@
                 </div>
 
             </div>
+
+            <!-- FOOTER FOR SKILLS TAB -->
+            <div style="text-align: center; padding: 60px 32px 32px; border-top: 1px solid var(--border); margin-top: 60px;">
+                <p style="font-size: 14px; color: var(--text-dim); margin-bottom: 12px;">Dutch (Native) · English (Native) · French (Intermediate)</p>
+                <p style="font-size: 14px; color: var(--text-dim); margin-bottom: 12px;">Bachelor Digital Marketing · Artesis Plantijn (2015-2018) · Graphic Design · Syntra (2014-2016)</p>
+                <p style="font-size: 14px; color: var(--text-dim); margin-top: 20px;">
+                    <a href="https://deanleite.com" target="_blank" class="footer-link">deanleite.com</a>
+                </p>
+            </div>
+
         </div>
 
     </div>
@@ -1337,6 +1359,3 @@
             }
         }
     </script>
-
-</body>
-</html>
